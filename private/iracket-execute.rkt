@@ -32,7 +32,7 @@
     (define img-style
       "display: inline; vertical-align: baseline; padding: 0pt; margin: 0pt; border: 0pt")
     (write-special `(img ((style ,img-style) (src ,img-src))) out))
-  (parameterize ((pretty-print-columns 'infinity)
+  (parameterize ((pretty-print-columns 80)
                  (pretty-print-size-hook size-hook)
                  (pretty-print-print-hook print-hook))
     (pretty-print v pout))
